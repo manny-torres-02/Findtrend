@@ -11,6 +11,9 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -23,11 +26,15 @@
         to improve your experience.
       </p>
     <![endif]-->
+    <section class="hero">
     <nav>
       <!-- lightning bolt  -->
-      <span id="logo" class="left">findtrend</span>
+      <div class="left">
+        <img id="logo" src="./img/lightning-bolt.svg" alt="lightning bolt" />
+      <span >findtrend</span>
+    </div>
       <div class="middle">
-        <ul >
+        <ul>
           <li>About</li>
           <li>How it Works</li>
           <li>Pricing</li>
@@ -36,86 +43,155 @@
         </ul>
       </div>
       <div  class="right">
-        <ul>
-          <li><button>Login</button></li>
-          <li><button>Sign Up</button></li>
-        </ul>
+      
+          <button id="">Login</button>
+          <button>Sign Up</button>
+      
     </nav>
     <main>
-      <h1> Minimize your tabs. 
-        Find the Trends!
-      </h1>
-      <br>Don\’t let your computer memories consumes all of those browser tabs. 
-        </br>
+      <div class="hero-content">
+      <h1> Minimize your tabs. </h1>
+      <h1> Find the Trends! </h1>
+    
+      <p>
+      Don’t let your computer memories consumes all of those browser tabs. 
+      <br/>
         Findtrend  let you gathers all of your favorite website into one place.</p>
+      </br>
         <!-- TODO: Add Fire emoji to this item   -->
-      <button>Get Started</button>
+      <button id="get-started">Get Started</button>
+    </div>
     </main>
-    <section>
+  </section>
+
+    <section class="new-tabs">
       <!-- TODO: Add in styling  -->
+       <div class="center">
       <h1> Open new tabs is sh*t </h1>
       <div class="white-rectangle">
-        <div class="black-rectangle"> 
-          <!-- TODO: X and styling here  -->
-      Findtrend - Elon Musk <span>x</span>
-    </div>
+      <img class="tab5" src="./img/tab5.png" />
+    
     </div>
     <!-- TODO: Small text  -->
     <span>A solution for your browser tabs and don’t make your device get slower over time. Get ease and faster to discover a trend with just one tab.</span>
+  </div>
     </section>
 
-    <section>
-      <h1>Findtrend helps you to increase your, productivity and reduce your computer's memory load, an application that can fulfill your daily browsing needs.</h1>
-      <h1>Findtrend make +1000 Startup grow</h1>
+    <section class="findtrend-brands">
+      <!-- <div> -->
+      <h1>Findtrend helps you to increase your, productivity and reduce your computer's memory load, <span class="grey">an application that can fulfill your daily browsing needs.
+      </span>
+      </h1>
+      <h1 class="h1-center">Findtrend make +1000 Startup grow</h1>
       <!-- TODO: Grid? - create the grid of icons -->
       <!-- Cards -->
-      <div>
+      <div class="brands">
         <!-- Is there a way to use a map to pull and plac ethem all  -->
-        <div class="card"><img class="icon"/>Microsoft</div>
-        <div class="card"><img class="icon"/>Allianz</div>
-        <div class="card"><img class="icon"/>upwork</div>
-        <div class="card"><img class="icon"/>Volvo</div>
-        <div class="card"><img class="icon"/>Grab</div>
-        <div class="card"><img class="icon"/>Verizon</div>
-        <div class="card"><img class="icon"/>Coinbase</div>
-        <div class="card"><img class="icon"/>Expedia</div>
-        <div class="card"><img class="icon"/>Airtable</div>
-        <div class="card"><img class="icon"/>Magento</div>
-        <div class="card"><img class="icon"/>Carrera</div>
-        <div class="card"><img class="icon"/>Bonanza</div>
-        <div class="card"><img class="icon"/>WeTransfer</div> 
-        <div class="card"><img class="icon"/>Suzuki</div>
-        <div class="card"><img class="icon"/>Algolia</div>
-        <div class="card"><img class="icon"/>Heineken</div>
+        <div class="card"><img class="icon" src="./img/Microsoft.png"/></div>
+        <div class="card"><img class="icon" src="./img/Allianz.png"/></div>
+        <div class="card"><img class="icon" src="./img/upwork.png"/></div>
+        <div class="card"><img class="icon" src="./img/volvo.png"/></div>
+        <div class="card"><img class="icon" src="./img/grab.png"/></div>
+        <div class="card"><img class="icon" src="./img/verizon.png"></div>
+        <div class="card"><img class="icon" src="./img/coinbase.png"/></div>
+        <div class="card"><img class="icon" src="./img/expedia.png"/></div>
+        <div class="card"><img class="icon" src="./img/airtable.png"/></div>
+        <div class="card"><img class="icon" src="./img/magento.png"/></div>
+        <div class="card"><img class="icon" src="./img/carrera.png"/></div>
+        <div class="card"><img class="icon" src="./img/Bonanza.png"/></div>
+        <div class="card"><img class="icon" src="./img/WeTransfer.png"/></div> 
+        <div class="card"><img class="icon" src="./img/Suzuki.png"/></div>
+        <div class="card"><img class="icon" src="./img/algolia.png"/></div>
+        <div class="card"><img class="icon" src="./img/Heineken.png"/></div>
       </div>
+    <!-- </div> -->
     </section>
 
     <!-- Platform Connections  -->
-    <section>
+    <section class="platforms">
       <h1> All Platforms connect to Findtrend</h1>
-      <!-- Place Images  -->
       <div class="Socials">
-        <img>Facebook</img>
-        <img>Twitter</img>
-        <img>Instagram</img>
-        <img>Linkedin</img>
+        <img class="icon" src="./img/icons/facebook.png"></img>
+        <img src="./img/icons/twitter.png"></img>
+        <img src="./img/icons/dribble.png"></img>
+        <img src="./img/icons/pinterest.png"></img>
+        <img src="./img/icons/medium.png"></img>
+        <img src="./img/icons/reddit.png"></img>
+        <img src="./img/icons/VK.png"></img>
+        <img src="./img/icons/linkedin.png"></img>
+      </div>
+      <!-- Tweets  -->
+      <div class="tweets">
+        <img src="./img/Tweets/tweet_2.png"></img>
+        <img src="./img/Tweets/tweet_1.png"></img>
+        <img src="./img/Tweets/tweet_3.png"></img>
       </div>
       <button> View More Trends </button>
-    </section>
+    </section> 
 
     <!-- Pricing  -->
     <section class="pricing">
       <h1>Get your Best Deal</h1>
       <h3>Monthly</h3>
-      <h2>Toggle Switch Example</h2>
-
-      <!-- Toggle Switch -->
+      <!-- <h2>Toggle Switch Example</h2>
+      Toggle Switch -->
       <label class="switch">
           <input type="checkbox">
           <span class="slider"></span>
       </label>
+      <h3>Yearly</h3>
+
+      <div class="pricing">
+        <div class="pricing-card">
+          <h2>Personal</h2>
+          <p>Special first packet for all</p>
+          <span class="thin line"></span>
+          <h3>$8</h3> <span>/month</span>
+          <p>Up to 5 pages each group</p>
+          <p>Up to 10 group pages</p>
+          <p>5 Days group pages saved</p>
+          
+          <button>Start Free Trial</button>
+        </div>
+        <div class="pricing-card">
+          <h2>Regular</h2>
+          <p>Recommended for Personal Pro</p>
+          <h3>$20.00</h3> <span>/Month</span>
+      
+          <p>Up to 15 pages each group</p>
+          <p>Download up to 20 pages</p>
+          <p>Up to 10 group pages</p>
+          <p>15 Days group pages saved</p>
+          <button>Start Free Trial</button>
+        </div>
+        <div class="pricing-card">
+          <h2>Premium</h2>
+          <p>Packet for Startup & Company</p>
+          <span class="thin-lines"></span>
+          <h3>$48</h3> <span>/Month</span>
+          <p>Unlimited group pages</p>
+          <p>Unlimited download pages</p>
+          <p>Unlimited group pages</p>
+          <p>Customize sorting group page name</p>
+          <p>Customize group page name</p>
+          <p>30 Days group page saved</p>
+          <button>Start Free Trial</button>
+        </div>
+      </div>
   
+    </section> 
+    <section class="cta">
+      <h1>Join us on email for </h1>
+      <h1>more trending topcs</h1>
+      <button>Join Now</button>
     </section>
-    <script src="" async defer></script>
+    <footer>
+      <div>
+        <img src="./img/icons/findtrend_dark.png" alt="lightning bolt" />
+        <img src="./img/icons/findtrend_name.png" alt="lightning bolt" />
+        <!-- <span></span> -->
+      </div>
+    </footer>
+    <!-- <script src="" async defer></script> -->
   </body>
 </html>

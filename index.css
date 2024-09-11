@@ -1,3 +1,294 @@
+/* Variables */
+
+:root {
+  /* Color Palette */
+  --primary: #a8ff35;
+  --green2: #87d322;
+  --button-hover: #8cc83a;
+  --black: #000000;
+  --black2: #2b2b2b;
+  --grey1: #8b8b8b;
+  --grey2: #adadad;
+  --grey3: #f5f5f5;
+  --grey4: #f1f1f1;
+  --off-white: #ffffff;
+
+  /* Font  */
+
+  /* Spacing  */
+
+  /* button styling  */
+
+  /* Shadows? */
+}
+
+.rubik-light {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rubik-regular {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-bold {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* global/body stylings  */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.hero {
+  background-image: url(../img/Bg-hero/website.png);
+  color: var(--off-white);
+  height: 900px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  background-color: var(--black);
+  color: var(--off-white);
+  position: fixed;
+  top: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#logo {
+  padding: 12px;
+}
+
+.middle {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 40%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+}
+
+nav .left {
+  display: flex;
+  /* justify-content: space-between; */
+  /* justify-content: ; */
+  align-items: center;
+  padding-left: 32px;
+  width: 10%;
+}
+
+nav .right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15%;
+  padding-right: 48px;
+}
+
+.right button {
+  background: none; /* Remove default background */
+  border: none; /* Remove border */
+  color: var(--off-white); /* Change font color */
+  font-family: inherit; /* Change font */
+  font-size: inherit;
+}
+
+.right button:hover {
+  color: var(--button-hover);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 700px;
+}
+
+main {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+main h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--off-white);
+  margin: 0;
+  padding: 0;
+}
+
+main p {
+  font-family: "Rubik", sans-serif;
+  /* font-size: */
+  font-weight: 200;
+  color: var(--grey1);
+  margin: 0;
+  padding: 16px 0;
+}
+
+.hero-content {
+  width: 50%;
+  margin: auto;
+}
+
+#get-started {
+  background-color: #87d322;
+  height: 64px;
+  width: 180px;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 70px;
+}
+
+.new-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--primary);
+  width: 100%;
+  height: 742px;
+  padding: 0;
+  margin: 0;
+}
+
+.new-tabs .center h1 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+.center {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 60%;
+}
+
+.white-rectangle {
+  height: 40%;
+  width: 40%;
+  background-color: var(--off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin: 24px 0;
+}
+.tab5 {
+  width: 80%;
+  /* height: 80%; */
+  /* margin: auto; */
+}
+
+/* findtrend brands section */
+.findtrend-brands {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 1500px;
+  background-color: var(--off-white);
+  padding: 0;
+  margin: 0;
+}
+
+.findtrend-brands div {
+  width: 80%;
+}
+
+.findtrend-brands h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  color: var(--black2);
+}
+
+.grey {
+  color: var(--grey1);
+  height: 100%;
+  width: 100%;
+}
+
+.h1-center {
+  text-align: center;
+}
+
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--off-white);
+  padding: 20px 0;
+}
+
+.brands .card {
+  margin: 20px;
+  flex: 0 1 20%; /* Make each card take 20% of the width */
+}
+
+/* platforms */
+.platforms {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--off-white);
+  padding: 0;
+  margin: 0;
+}
+.platforms h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  color: var(--black2);
+}
+
 .switch {
   position: relative;
   display: inline-block;
