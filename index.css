@@ -278,15 +278,110 @@ main p {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  background-color: var(--off-white);
-  padding: 0;
+  /* height: 100%; */
+  background-color: var(--grey3);
+  padding: 96px 0 112px 0;
   margin: 0;
 }
+
 .platforms h1 {
   font-weight: 600;
   font-size: 4rem;
   color: var(--black2);
+}
+
+.socials {
+  padding: 48px;
+}
+
+.social-icon {
+  padding: 16px;
+  height: 96px;
+}
+
+.tweets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tweet {
+  width: 50%;
+  padding-top: 16px;
+  padding-bottom: 64px;
+}
+
+.platforms button {
+  background: none; /* Remove default background */
+  background-color: var(--black);
+  border: none; /* Remove border */
+  color: var(--off-white); /* Change font color */
+  font-family: inherit; /* Change font */
+  font-size: 16px;
+  height: 80px;
+  width: 192px;
+  border-radius: 96px;
+}
+
+/* Pricing */
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black);
+  color: white;
+}
+
+.pricing h1 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  padding: 12px;
+  width: 25%;
+  margin: 24px;
+}
+
+.odd {
+  background-color: var(--off-white);
+  color: black;
+}
+.even {
+  background-color: var(--primary);
+  color: black;
+}
+
+.thin-line {
+  /* border: 1px var(--black2); */
+  height: 1px;
+  background-color: var(--black2);
+}
+
+.price-container{
+  display:flex; 
+  align-items: center; 
+}
+
+.price-container h2 {
+  line-height: 1;
+  font-size: 32px;
+}
+
+.price-container span{
+  
 }
 
 .switch {
@@ -309,7 +404,7 @@ main p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--grey3); /* Default slider background */
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -321,15 +416,18 @@ main p {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--green2); /* Default toggle knob color */
   transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: var(--green2); /* Change slider background when checked */
 }
 
 input:checked + .slider:before {
   transform: translateX(26px);
+  background-color: var(
+    --off-white
+  ); /* Change toggle knob color when checked */
 }
