@@ -79,6 +79,7 @@ body {
 nav {
   background-color: var(--black);
   color: var(--off-white);
+  z-index: 1;
   position: fixed;
   top: 0;
   padding: 1rem;
@@ -229,11 +230,11 @@ main p {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 1500px;
   background-color: var(--off-white);
   padding: 0;
-  margin: 0;
+  margin: auto;
 }
 
 .findtrend-brands div {
@@ -268,7 +269,16 @@ main p {
 
 .brands .card {
   margin: 20px;
-  flex: 0 1 20%; /* Make each card take 20% of the width */
+  background-color: var(--grey4);
+  width: 20%;
+  height: 20%;
+  display: flex;
+}
+
+.brands .icon {
+  width: 80%;
+  margin: auto;
+  /* height: 90%; */
 }
 
 /* platforms */
@@ -312,9 +322,9 @@ main p {
 }
 
 .platforms button {
-  background: none; /* Remove default background */
+  background: none;
   background-color: var(--black);
-  border: none; /* Remove border */
+  border: none;
   color: var(--off-white); /* Change font color */
   font-family: inherit; /* Change font */
   font-size: 16px;
@@ -350,9 +360,11 @@ main p {
   display: flex;
   flex-direction: column;
   height: 550px;
-  padding: 12px;
+  padding: 12px 12px 128px 12px;
+  /* justify-content: space-between; */
   width: 25%;
   margin: 24px;
+  position: relative;
 }
 
 .odd {
@@ -370,9 +382,12 @@ main p {
   background-color: var(--black2);
 }
 
-.price-container{
-  display:flex; 
-  align-items: center; 
+.price-container {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  align-self: end;
+  justify-content: flex-start;
 }
 
 .price-container h2 {
@@ -380,8 +395,38 @@ main p {
   font-size: 32px;
 }
 
-.price-container span{
-  
+.price-container span {
+  line-height: 1;
+}
+
+.button-bottom {
+  position: absolute;
+  min-height: 60px;
+  font-family: inherit;
+  bottom: 10px;
+  left: 0;
+  width: 40%; /* Optional: makes button full width */
+  height: 40px; /* Adjust as needed */
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.odd .button-bottom {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 50px;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.even .button-bottom {
+  background-color: var(--black);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .switch {
@@ -430,4 +475,55 @@ input:checked + .slider:before {
   background-color: var(
     --off-white
   ); /* Change toggle knob color when checked */
+}
+
+/* Call to action  */
+
+.cta {
+  height: 600px;
+  background-color: var(--primary);
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cta h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.grey-text {
+  color: var(--black2);
+  opacity: 60%;
+}
+
+.join {
+  min-height: 60px;
+  width: 10%;
+  font-size: 24px;
+  font-family: inherit;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background-color: var(--black);
+}
+
+footer {
+  height: 75px;
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-links {
+  width: 30%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-around;
+  flex-direction: row;
 }
