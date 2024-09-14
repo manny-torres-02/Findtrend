@@ -133,7 +133,7 @@ nav .right {
   justify-content: space-evenly;
   align-items: center;
   width: 213px;
-  padding-right: 48px;
+  padding-right: 80px;
 }
 #white-button {
   background-color: white;
@@ -320,13 +320,14 @@ main p {
 /* platforms */
 .platforms {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 2209px;
+  /* height: 2209px; */
   background-color: var(--grey3);
-  padding: 96px 0 112px 0;
+  padding: 96px 0 140px 0;
   margin: 0;
 }
 
@@ -349,6 +350,7 @@ main p {
   width: 124px;
   height: 124px;
   background-color: var(--off-white);
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,16 +363,25 @@ main p {
   margin: auto;
 }
 
+.green {
+  background-color: var(--primary);
+}
+
 .tweets {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tweet {
+.twitter-tweet {
   width: 50%;
-  padding-top: 16px;
-  padding-bottom: 64px;
+  padding-top: 40px;
+  /* padding-bottom: 64px; */
+}
+
+.view-more-trends {
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
 
 .platforms button {
@@ -392,30 +403,30 @@ main p {
   align-items: center;
   background-color: var(--black);
   color: white;
+  height: 1128px;
 }
 
 .pricing h1 {
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 64px;
 }
 
 .card-section {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
-  width: 100%;
+  margin-top: 12px;
 }
 
 .pricing-card {
   display: flex;
   flex-direction: column;
-  height: 550px;
-  padding: 12px 12px 128px 12px;
-  /* justify-content: space-between; */
-  width: 25%;
-  margin: 24px;
+  height: 640px;
+  width: 360px;
+  border-radius: 15px;
+  padding: 24px;
   position: relative;
 }
 
@@ -428,10 +439,26 @@ main p {
   color: black;
 }
 
+.package-name {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 32px 0;
+}
+.package-name h2 {
+  margin: 0;
+  font-size: 32px;
+  padding-bottom: 8px;
+}
+
+.package-name p {
+  margin: 0;
+  padding-bottom: 8px;
+}
+
 .thin-line {
   /* border: 1px var(--black2); */
-  height: 1px;
-  background-color: var(--black2);
+  height: 2px;
+  background-color: var(--grey2);
 }
 
 .price-container {
@@ -447,8 +474,17 @@ main p {
   font-size: 32px;
 }
 
+.price-container p {
+  font-size: var(--normal-text-size);
+}
+
 .price-container span {
   line-height: 1;
+}
+
+svg {
+  height: 18px;
+  vertical-align: middle;
 }
 
 .button-bottom {
@@ -463,6 +499,7 @@ main p {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .odd .button-bottom {
   background-color: var(--primary);
   border: none;
@@ -481,6 +518,16 @@ main p {
   font-size: 1rem;
 }
 
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 350px;
+}
+
+.yearly {
+  color: var(--grey1);
+}
 .switch {
   position: relative;
   display: inline-block;
@@ -544,6 +591,11 @@ input:checked + .slider:before {
 .cta h1 {
   margin: 0;
   font-size: 4rem;
+  text-align: right;
+}
+
+.cta .join {
+  margin-top: 40px;
 }
 
 .grey-text {
@@ -565,14 +617,16 @@ input:checked + .slider:before {
 footer {
   height: 75px;
   margin: 20px;
-  width: 100%;
+  width: 1280px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer-links {
-  width: 30%;
+  width: 60%;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
