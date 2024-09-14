@@ -14,10 +14,11 @@
   --off-white: #ffffff;
 
   /* Font  */
-  --heading1: 81px;
+  --heading1: 72px;
   --heading2: 76px;
   --normal-text-size: 18px;
 
+  --font-weight-bold: 900;
   /* Spacing  */
 
   /* button styling  */
@@ -46,20 +47,38 @@
   font-style: normal;
 }
 
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
+
 /* global/body stylings  */
 html,
 body {
   height: 100%;
-  width: 100%;
+  /* max-width: 1440px; */
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif;
   font-size: var(--normal-text-size);
+
+  overflow-x: hidden;
+}
+
+.max-width {
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .hero {
-  background-image: url(img/Bg-hero/website.png);
+  background: url(img/Bg-hero/website.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: var(--off-white);
+  width: 100%;
   height: 900px;
   margin: 0;
   padding: 0;
@@ -70,17 +89,17 @@ body {
 }
 
 nav {
-  background-color: var(--black);
+  /* background-color: var(); */
   color: var(--off-white);
   font-size: var(--normal-text-size);
   z-index: 1;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  /* width: 100% */
   height: 100px;
 }
 
@@ -104,9 +123,8 @@ nav ul {
 
 nav .left {
   display: flex;
-
   align-items: center;
-  padding-left: 32px;
+  padding-left: 80px;
   width: 10%;
 }
 
@@ -114,15 +132,27 @@ nav .right {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 15%;
+  width: 213px;
   padding-right: 48px;
+}
+#white-button {
+  background-color: white;
+  color: #000000;
+  /* border: red 3px; */
+  margin-left: 36px;
+  width: 129px;
+  height: 42px;
+  border-radius: 42px;
 }
 
 .right button {
-  background: none; /* Remove default background */
-  border: none; /* Remove border */
-  color: var(--off-white); /* Change font color */
-  font-family: inherit; /* Change font */
+  background: none;
+  /* background-color: white; */
+  /* margin-right: 34px; */
+  padding: 2opx;
+  border: none;
+  color: var(--off-white);
+  font-family: inherit;
   font-size: inherit;
 }
 
@@ -135,6 +165,7 @@ nav .right {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-weight: var(--font-weight);
   width: 50%;
   height: 700px;
 }
@@ -188,9 +219,15 @@ main p {
   margin: 0;
 }
 
+.new-tabs .center {
+  width: 854px;
+  height: 462px;
+}
+
 .new-tabs .center h1 {
-  font-weight: 600;
-  font-size: 4rem;
+  font-weight: 700;
+  font-size: 72px;
+  margin: 0px;
 }
 .center {
   margin: auto;
@@ -199,24 +236,21 @@ main p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 50%;
-  height: 60%;
 }
 
 .white-rectangle {
-  height: 40%;
-  width: 40%;
   background-color: var(--off-white);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
   margin: 24px 0;
+  height: 202px;
+  width: 502px;
 }
 .tab5 {
-  width: 80%;
-  /* height: 80%; */
-  /* margin: auto; */
+  height: 82px;
+  width: 341.23px;
 }
 
 /* findtrend brands section */
@@ -225,27 +259,28 @@ main p {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  width: 90%;
-  height: 1500px;
+
+  height: 1600px;
   background-color: var(--off-white);
   padding: 0;
   margin: auto;
 }
 
 .findtrend-brands div {
-  width: 80%;
+  width: 1160px;
 }
 
 .findtrend-brands h1 {
-  font-weight: 600;
-  font-size: 4rem;
+  font-weight: 700;
+  font-size: 64px;
   color: var(--black2);
+  line-height: 76px;
 }
 
 .grey {
   color: var(--grey1);
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
 }
 
 .h1-center {
@@ -257,11 +292,17 @@ main p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 1160px;
+  height: 732px;
   background-color: var(--off-white);
   padding: 20px 0;
 }
 
+.card-wrapper {
+  height: 576px;
+  display: flex;
+  flex-wrap: wrap;
+}
 .brands .card {
   margin: 20px;
   background-color: var(--grey4);
@@ -283,7 +324,7 @@ main p {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  /* height: 100%; */
+  height: 2209px;
   background-color: var(--grey3);
   padding: 96px 0 112px 0;
   margin: 0;
@@ -296,12 +337,28 @@ main p {
 }
 
 .socials {
-  padding: 48px;
+  /* padding: 48px; */
+  height: 124px;
+  /* width: 1106px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-card {
+  width: 124px;
+  height: 124px;
+  background-color: var(--off-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icon {
-  padding: 16px;
-  height: 96px;
+  /* padding: 16px; */
+  height: 60px;
+  width: 60px;
+  margin: auto;
 }
 
 .tweets {
