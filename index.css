@@ -333,9 +333,9 @@ main p {
 }
 
 .brands .icon {
-  width: 80%;
   margin: auto;
-  /* height: 90%; */
+  width: 200px;
+  object-fit: cover;
 }
 
 /* platforms */
