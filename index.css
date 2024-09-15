@@ -90,7 +90,7 @@ body {
 
 nav {
   /* background-color: var(); */
-  position: fixed;
+  position: sticky;
   color: var(--off-white);
   font-size: var(--normal-text-size);
   z-index: 1;
