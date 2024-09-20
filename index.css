@@ -117,7 +117,19 @@ nav {
   /* width: 100%; */
   height: 100px;
 }
+/* Stlying the menu icon, the checkbox stays hidden */
+/* nav label {
+  text-align: right;
+  display: block;
+  padding: 0.5em;
+  line-height: 1.6em;
+  align-self: center;
+} */
 
+nav input[type="checkbox"],
+nav label {
+  display: none;
+}
 #logo {
   padding: 12px;
   height: 40px;
@@ -216,6 +228,7 @@ main p {
 }
 #get-started {
   background-color: #87d322;
+  border: none;
   height: 64px;
   width: 180px;
   font-family: inherit;
@@ -537,12 +550,13 @@ svg {
   font-family: inherit;
   bottom: 10px;
   left: 0;
-  width: 296px; /* Optional: makes button full width */
+  width: 360px; /* Optional: makes button full width */
   height: 58px; /* Adjust as needed */
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 24px;
+  font-size: 18px;
 }
 
 .odd .button-bottom {
@@ -551,7 +565,6 @@ svg {
   border-radius: 50px;
   color: black;
   cursor: pointer;
-  font-size: 1rem;
 }
 
 .even .button-bottom {
@@ -560,7 +573,6 @@ svg {
   border-radius: 50px;
   color: white;
   cursor: pointer;
-  font-size: 1rem;
 }
 
 .toggle-wrapper {
@@ -699,4 +711,59 @@ footer p {
   font-size: 18px;
   font-weight: 400;
   margin-left: 40px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 400px) {
+  * {
+    /* max-width: 375px; */
+  }
+
+  .mobile-view {
+    width: 375px;
+    height: auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  input[type="checkbox"]:not(:checked) + ul {
+    display: none;
+  }
+
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Stlying the menu icon, the checkbox stays hidden */
+  nav label {
+    text-align: right;
+    display: block;
+    padding: 0.5em;
+    line-height: 1.6em;
+    align-self: center;
+  }
+
+  /* Because we are in mobile mode, we want to display it as a vertical list */
+  nav ul {
+    display: block;
+  }
+
+  /* We have two lists: the first one are the always visibile items in the 
+        menu bar. The second one is the one that will be hidden */
+  nav ul:last-child {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  nav ul li {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: 0.5em;
+  }
 }
