@@ -29,49 +29,54 @@
       </p>
     <![endif]-->
     <div class="nav-wrapper mobile-view">
-      <nav class="max-width">
+      <nav class="max-width mobile-view">
         <!-- lightning bolt  -->
         <div class="left">
           <img id="logo" src="./img/lightning-bolt.svg" alt="lightning bolt" />
           <span class="hidden">Findtrend</span>
         </div>
-        <div class="middle">
-          <!-- <label for="menu" tab="0">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
 
-              <path fill-rule="evenodd"
-                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-                clip-rule="evenodd" />
-
-            </svg>
-          </label> -->
-
+        <div class="middle" class="">
           <!-- The hamburger menu -->
-          <label for="menu" tabindex="0"> 🍔 </label>
-          <input id="menu" type="checkbox" />
+          <!-- <label for="menu" tabindex="0"> 🍔 </label>
+          <input id="menu" type="checkbox" /> -->
           <!-- The collapsable menu -->
           <!-- <input id='menu' type='checkbox' /> -->
-          <ul>
-            <li>About</li>
-            <li>How it Works</li>
-            <li>Pricing</li>
-            <li>Solution</li>
-            <li>Features</li>
+          <ul class="nav-item nav-menu">
+            <div class="list-items">
+              <li class="nav-item">About</li>
+              <li class="nav-item">How it Works</li>
+              <li class="nav-item">Pricing</li>
+              <li class="nav-item">Solution</li>
+              <li class="nav-item">Features</li>
+            </div>
+            <div class="right nav-buttons">
+              <button class="nav-item" id="login-button">Login</button>
+              <button class="nav-item" id="white-button">Register</button>
+            </div>
           </ul>
         </div>
-        <div class="right">
-          <button id="">Login</button>
-          <button id="white-button">Register</button>
-      </nav>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div id="overlay" class="overlay"></div>
+    </div>
+
+    </nav>
+
+
     </div>
     <section class="hero">
 
-      <main class="max-width">
-        <div class="hero-content">
-          <h1> Minimize your tabs. </h1>
-          <h1> Find the Trends! </h1>
+      <main class="max-width mobile-view p-10px">
+        <div class="hero-content mobile-view ">
+          <h1 class="text-900w-36px p-10px"> Minimize your tabs. </h1>
+          <h1 class="text-900w-36px p-10px"> Find the Trends! </h1>
 
-          <p>
+          <p class="text-400-w-14px p-30px p-bot-10px" id="">
             Don’t let your computer memories consumes all of those browser tabs.
             <br />
             Findtrend let you gathers all of your favorite website into one place.
@@ -79,35 +84,50 @@
           </br>
           <!-- TODO: Add Fire emoji to this item   -->
           <button id="get-started">Get Started &#x1F525;</button>
+
+        </div>
+        <div class="social-media-box-wrapper desktop-hidden mobile-view p-t-60">
+
+          <img class="social-media-box rotate-neg4" src="./img/Mobile_images/twitter_box.png" />
+
+          <img class="social-media-box rotate-up4" src="./img/Mobile_images/pinterest_box.png" />
+          <img class="social-media-box rotate-up2" src="./img/Mobile_images/facebook_box.png" />
+          <img class="social-media-box rotate-neg2" src="./img/Mobile_images/dribble_box.png" />
+
         </div>
       </main>
     </section>
 
-    <section class="new-tabs">
+    <section class="new-tabs " id="mobile-view">
       <!-- TODO: Add in styling  -->
-      <div class="center">
-        <h1> Open new tabs is sh*t </h1>
-        <div class="white-rectangle">
+      <div class="center p-10px" id="mobile-view">
+        <h1 id="text-700w-36px"> Open new tabs is sh*t </h1>
+        <!-- <img src="img/Mobile_images/phone/one-tab.png" />÷ -->
+        <img class="annotation top-right desktop-hidden" src="img/Mobile_images/phone/one-tab.png" />
+        <div class="white-rectangle ">
           <img class="tab5" src="./img/tab5.png" />
-
         </div>
-        <!-- TODO: Small text  -->
-        <span>A solution for your browser tabs and don’t make your device get slower over time. Get ease and faster to
+        <img class="annotation bot-left desktop-hidden" src="img/Mobile_images/phone/solution_discover.png" />
+        <span class="p-10px">A solution for your browser tabs and don’t make your device get slower over time. Get ease
+          and faster to
           discover a trend with just one tab.</span>
+        <!-- <img src="img/Mobile_images/phone/solution_discover.png" /> -->
       </div>
     </section>
 
-    <section class="findtrend-brands">
-      <div class="">
-        <h1>Findtrend helps you to increase your, productivity and reduce your computer's memory load, <span
-            class="grey">an application that can fulfill your daily browsing needs.
+    <section class="findtrend-brands mobile-view">
+      <div class="mobile-view   ">
+        <h1 class=""> Findtrend helps you to increase your, productivity and reduce your computer's
+          memory load, <span class="grey">an application that can fulfill your daily browsing needs.
           </span>
         </h1>
+
       </div>
-      <!-- TODO: Grid? - create the grid of icons -->
+      <h1 class="h1-center" id="p-bot-40">Findtrend make +1000 Startup grow</h1>
+      <!-- TODO: Mobile Grid - Revisit this, its all messed up -->
       <!-- Cards -->
       <div class="brands">
-        <h1 class="h1-center">Findtrend make +1000 Startup grow</h1>
+
         <!-- Is there a way to use a map to pull and plac ethem all  -->
         <div class="card-wrapper">
           <div class="card"><img class="icon" src="./img/Microsoft.png" /></div>
@@ -131,9 +151,9 @@
     </section>
 
     <!-- Platform Connections  -->
-    <section class="platforms">
-      <h1 class=""> All Platforms connect to Findtrend</h1>
-      <div class="socials max-width">
+    <section class="platforms mobile-view center" id="p-top-80">
+      <h1 class="text-900w-36px p-10px" id="text-900w-36px "> All Platform connect to Findtrend</h1>
+      <div class="socials max-width mobile-view">
         <div class="social-card">
           <img class="social-icon" src="./img/icons/facebook.png"></img>
         </div>
@@ -156,7 +176,7 @@
         </div>
       </div>
       <!-- Tweets  -->
-      <div class="tweets">
+      <div class="tweets mobile-view p-10px">
         <blockquote class="twitter-tweet">
           <p lang="en" dir="ltr">I dug into the ChatGPT Remix codebase and found a few clues as to why they moved from
             Next.js to Remix<br><br>Some surprising things here<br><br>Quick video detailing my thoughts behind the
@@ -189,7 +209,7 @@
 
     <!-- Pricing  -->
     <section class="pricing">
-      <h1>Get your Best Deal</h1>
+      <h1 id="text-900w-36px">Get your Best Deal</h1>
       <div class="toggle-wrapper">
         <h3>Monthly</h3>
         <!-- <h2>Toggle Switch Example</h2>
@@ -199,10 +219,12 @@
           <span class="slider"></span>
         </label>
         <h3 class="yearly">Yearly</h3>
+
       </div>
+      <img class="annotation bot-right desktop-hidden" src="./img/Mobile_images/phone/save.png">
 
       <div class="card-section ">
-        <div class="pricing-card odd">
+        <div class="pricing-card odd  ">
           <div class="package-name">
             <h2>Personal</h2>
             <p>Special first packet for all</p>
@@ -363,25 +385,24 @@
           <button class="button-bottom">Start Free Trial</button>
         </div>
       </div>
-
     </section>
-    <section class="cta ">
-      <div class="max-width center">
+    <section class="cta mobile-view">
+      <div class="max-width center mobile-view p-10px">
         <div>
-          <h1 class="black">Join us on email for </h1>
-          <h1 class="grey-text">more trending topics</h1>
+          <h1 id="black-text" class="black">Join us on email for </h1>
+          <h1 id="grey-text" class="grey-text">more trending topics</h1>
         </div>
         <button class="join">Join Now</button>
       </div>
     </section>
-    <footer class="max-width">
+    <footer class="max-width mobile-view">
       <div class="left">
         <img src="img/icons/findtrend_icon.png" alt="lightning bolt" />
         <p>Findtrend</p>
         <!-- <span></span> -->
       </div>
 
-      <ul class="footer-links">
+      <ul class="footer-links mobile-view">
         <li>Privacy Policy</li>
         <li> Terms and Conditions</li>
         <li> Contact Us</li>
@@ -391,5 +412,6 @@
     </footer>
     <!-- <script src="" async defer></script> -->
   </body>
+  <script src="/index.js"></script>
 
 </html>

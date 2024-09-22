@@ -56,7 +56,7 @@
 /* global/body stylings  */
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   /* max-width: 1440px; */
   margin: 0;
   padding: 0;
@@ -136,16 +136,35 @@ nav label {
 }
 
 .middle {
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  width: 40%;
+  align-items: center;
+  width: 100%;
+}
+
+.middle ul .nav-items {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  height: inherit;
+  /* height: auto; */
 }
 nav ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
   align-items: center;
+  width: 100%;
 }
 
 nav .left {
@@ -324,18 +343,26 @@ main p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 1160px;
-  height: 732px;
+  width: 100%;
+  /* height: 732px; */
   background-color: var(--off-white);
   padding: 20px 0;
 }
 
-.card-wrapper {
+/* .card-wrapper {
   width: 1200px;
   height: 576px;
   display: flex;
   flex-wrap: wrap;
+} */
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 }
+
 .brands .card {
   margin: 16px;
   background-color: var(--grey4);
@@ -343,6 +370,8 @@ main p {
   height: 120px;
   display: flex;
   border-radius: 5px;
+  align-items: center;
+  justify-self: center;
 }
 
 .brands .icon {
@@ -713,57 +742,555 @@ footer p {
   margin-left: 40px;
 }
 
+.hamburger {
+  display: none;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
 /* Media Queries */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
   * {
     /* max-width: 375px; */
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 375px;
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    font-size: var(--normal-text-size);
+    overflow-x: hidden;
+  }
+
+  .text-900w-36px {
+    font-size: 36px;
+    font-weight: 900;
+  }
+
+  #text-900w-36px {
+    font-size: 36px;
+    font-weight: 900;
+  }
+
+  #text-700w-36px {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .text-400w-14px {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .p-t-60 {
+    padding-top: 60px;
   }
 
   .mobile-view {
     width: 375px;
-    height: auto;
+    /* height: auto; */
+  }
+
+  #mobile-view {
+    width: 375px;
   }
 
   .hidden {
     display: none;
   }
 
-  input[type="checkbox"]:not(:checked) + ul {
+  #hidden {
     display: none;
+  }
+  main {
+    padding: 0;
+  }
+
+  .nav-wrapper {
+    display: flex;
   }
 
   nav {
+    display: flex;
     flex-direction: row;
+    background-color: #000;
+    z-index: 1000;
     flex-wrap: wrap;
     margin-left: 0;
     margin-right: 0;
+    position: fixed;
   }
 
-  /* Stlying the menu icon, the checkbox stays hidden */
-  nav label {
-    text-align: right;
-    display: block;
-    padding: 0.5em;
-    line-height: 1.6em;
-    align-self: center;
+  nav .left {
+    padding-left: 0;
+    /* width: 100%; */
+    display: inline-flex;
+    justify-content: center;
   }
 
-  /* Because we are in mobile mode, we want to display it as a vertical list */
-  nav ul {
-    display: block;
+  .middle {
+    width: 0px;
   }
 
-  /* We have two lists: the first one are the always visibile items in the 
-        menu bar. The second one is the one that will be hidden */
-  nav ul:last-child {
+  .nav .right {
+  }
+
+  .nav-menu {
+    position: fixed;
+    /* top: 0; */
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #000;
+    color: white;
+    z-index: 1000;
     width: 100%;
-    flex-basis: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
-  nav ul li {
-    margin-bottom: 0;
+  .nav-menu.active {
+    left: 0;
+    display: flex;
+    height: 400px;
+  }
+
+  .nav-item {
+    margin: 0px;
+    padding: 0px;
+    /* margin: 2.5rem 0; */
+  }
+
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: inherit;
+    /* height: auto; */
+  }
+
+  .nav-menu .right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1001;
+    width: 200px;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-buttons {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Grey overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: right;
-    padding: 0.5em;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* Semi-transparent grey */
+    z-index: 999; /* Below the navbar but above the content */
+    display: none; /* Hidden by default */
+  }
+
+  /* Show the overlay */
+  .overlay.active {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.507);
+
+    z-index: 999;
+  }
+
+  .nav-buttons button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #login-button {
+    /* background-color: #333; */
+    color: white;
+  }
+
+  #white-button {
+    background-color: white;
+    color: #000000;
+    margin-left: 0;
+  }
+
+  .bar {
+    background-color: white;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .p-10px {
+    padding: 0px 10px;
+  }
+  #p-10px {
+    padding: 10px 10px;
+  }
+
+  .p-30px {
+    padding: 0px 30px;
+  }
+
+  .p-bot-10px {
+    padding-bottom: 10px;
+  }
+  .hero {
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-media-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: center;
+    flex-wrap: wrap; /* Allow images to wrap if necessary */
+  }
+
+  .social-media-box {
+    width: 300px; /* Set consistent size for images */
+    height: 78px; /* Adjust height for consistency */
+    /* margin: 20px; Optional: Space between boxes */
+    box-shadow: 0px 0px 0px rgb(141, 141, 141); /* Box shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover */
+    /* padding-bottom: -10px; */
+  }
+
+  .rotate-up2 {
+    transform: rotate(-3deg);
+    position: relative;
+    top: -16px;
+    z-index: 8;
+  }
+
+  .rotate-up4 {
+    transform: rotate(2deg);
+    z-index: 9;
+    /* position: relative;
+    bottom: -12px; */
+  }
+
+  .rotate-neg2 {
+    transform: rotate(2deg);
+    position: relative;
+    top: -28px;
+  }
+
+  .rotate-neg4 {
+    transform: rotate(-3deg);
+    z-index: 10;
+    position: relative;
+    bottom: -12px;
+  }
+
+  .social-media-box img {
+    display: block;
+    width: 100%; /* Ensure image fills its container */
+    height: 100%; /* Ensure consistent image size */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    margin: 0; /* Remove gaps */
+    padding: 0;
+  }
+  /* .rotate-up4 {
+    transform: rotate(-4deg);
+  }
+  .rotate-neg2 {
+    transform: rotate(+2deg);
+  }
+  .rotate-up2 {
+    transform: rotate(-2deg);
+  }
+  .rotate-neg4 {
+    transform: rotate(+4deg);
+  } */
+
+  .new-tabs {
+    height: 550px;
+    /* position: relative; */
+  }
+
+  .new-tabs .center {
+    position: relative;
+  }
+  .white-rectangle {
+    /* display: flex;
+    flex-direction: column; */
+    width: 340px;
+    height: 120px;
+  }
+
+  .annotation {
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    align-items: center;
+    font-size: 0.75rem;
+    color: black;
+    /* background-color: #fff; */
+    padding: 4px 8px;
+    border-radius: 6px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+
+  .top-right {
+    top: 100px;
+    right: -2px;
+  }
+
+  .bot-left {
+    bottom: 160px;
+    left: 0;
+  }
+
+  .tab5 {
+    width: 260px;
+    height: 60px;
+  }
+
+  .findtrend-brands {
+    height: auto;
+    /* flex-direction: column; */
+  }
+
+  .findtrend-brands div {
+    /* height: 1000px;
+     */
+    /* padding-top: 24px; */
+    width: 375px;
+  }
+
+  .findtrend-brands h1 {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 900;
+    padding: 80px 14px;
+  }
+
+  #p-bot-40 {
+    padding-bottom: 40px;
+  }
+
+  .h1-center {
+    padding-bottom: 40px;
+  }
+
+  .card-wrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 80px;
+  }
+
+  .brands .card {
+    box-sizing: border-box;
+    width: calc(50% - 48px);
+    height: 75px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brands .card .icon {
+    width: 100px;
+  }
+
+  /* .platforms {
+    height: 900px;
+    padding-top: 40px;
+  } */
+
+  #p-top-80 {
+    padding-top: 80px;
+  }
+
+  .platforms .socials {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 355px;
+    height: 240px;
+  }
+
+  .social-card {
+    height: 64px;
+    width: 64px;
+    margin: 5px;
+  }
+
+  .social-icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .platforms {
+    height: auto;
+    padding: 0;
+    padding-bottom: 80px;
+  }
+
+  .platforms h1 {
+    width: 375px;
+    font-size: 32px;
+    /* line-height: 42px; */
+    font-weight: 900;
+    /* padding: 80px 14px; */
+  }
+
+  blockquote .twitter-tweet {
+    max-width: 340px;
+  }
+
+  .pricing {
+    height: auto;
+    position: relative;
+    /* padding-bottom: 80px; */
+    padding-top: 80px;
+  }
+
+  .bot-right {
+    top: 190px;
+    left: 220px;
+  }
+
+  .toggle-wrapper {
+    font-size: 18px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  .card-section {
+    width: 340px;
+    height: 2200px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+  }
+
+  .pricing-card {
+    width: 340px;
+    height: 670px;
+    padding: 10px;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .button-bottom {
+    width: 275px;
+    height: 55px;
+  }
+
+  .package-name {
+    padding-bottom: 18px;
+  }
+  .package-name h2 {
+    font-size: 32px;
+  }
+
+  .price-container h2 {
+    font-size: 60px;
+  }
+
+  .cta {
+    height: 400px;
+  }
+
+  .cta .h1 {
+    max-width: 360px;
+  }
+
+  #grey-text,
+  #black-text {
+    font-size: 34px;
+  }
+
+  footer {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  footer .left {
+    padding: 0px;
+  }
+
+  .footer-links {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .footer-links li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .desktop-hidden {
+    display: none;
   }
 }
