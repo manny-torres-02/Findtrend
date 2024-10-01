@@ -47,29 +47,24 @@
   font-style: normal;
 }
 
-/* * {
-  background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-} */
-
 /* global/body stylings  */
 html,
 body {
-  /* height: 100%; */
-  /* max-width: 1440px; */
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif;
   font-size: var(--normal-text-size);
-
   overflow-x: hidden;
 }
 
 .max-width {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
+
+/* height */
 
 .hero {
   background: url(img/Bg-hero/website.png) no-repeat center center fixed;
@@ -103,33 +98,24 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 nav {
-  /* background-color: var(--black); */
   color: var(--off-white);
   font-size: var(--normal-text-size);
-  /* z-index: -1; */
-  /* position: fixed; */
   top: 0;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 100%; */
+  width: 100%;
   height: 100px;
 }
-/* Stlying the menu icon, the checkbox stays hidden */
-/* nav label {
-  text-align: right;
-  display: block;
-  padding: 0.5em;
-  line-height: 1.6em;
-  align-self: center;
-} */
 
 nav input[type="checkbox"],
 nav label {
   display: none;
 }
+
 #logo {
   padding: 12px;
   height: 40px;
@@ -157,8 +143,8 @@ nav label {
   justify-content: space-evenly;
   align-items: center;
   height: inherit;
-  /* height: auto; */
 }
+
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -181,6 +167,7 @@ nav .right {
   width: 213px;
   padding-right: 80px;
 }
+
 #white-button {
   background-color: white;
   color: #000000;
@@ -259,18 +246,20 @@ main p {
 .new-tabs {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--primary);
   width: 100%;
   height: 742px;
-  padding: 0;
+  padding: 12px;
   margin: 0;
 }
 
 .new-tabs .center {
-  width: 854px;
-  height: 462px;
+  max-width: 900px;
+  max-height: 600px;
+  height: 100%;
+  padding: 28px;
 }
 
 .new-tabs .center h1 {
@@ -282,7 +271,7 @@ main p {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
 }
@@ -293,37 +282,53 @@ main p {
   align-items: center;
   justify-content: center;
   border-radius: 25px;
-  /* -top: 20px; */
   margin: 64px 0;
-  height: 202px;
-  width: 502px;
+  max-height: 202px;
+  height: 100%;
+  max-width: 502px;
+  width: 100%;
+  overflow: hidden;
+}
+.white-rectangle div {
+  /* max-height: 84px; */
+  /* max-width: 300px; */
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tab5 {
-  height: 82px;
-  width: 341.23px;
+  /* aspect-ratio: 342/84; */
+  /* max-width: 100%; */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 /* findtrend brands section */
 .findtrend-brands {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  height: 1600px;
+  /* max-height: 1800px; */
+  /* height: 2200px; */
   background-color: var(--off-white);
   padding: 0;
   margin-bottom: 32px;
 }
 
 .findtrend-brands div {
-  width: 1200px;
+  /* width: 1200px; */
   /* margin-bottom: 16px; */
+  padding: 0 40px;
 }
 
 .findtrend-brands h1 {
   font-weight: 700;
   font-size: 64px;
+
   color: var(--black2);
   line-height: 76px;
 }
@@ -349,24 +354,19 @@ main p {
   padding: 20px 0;
 }
 
-/* .card-wrapper {
-  width: 1200px;
-  height: 576px;
-  display: flex;
-  flex-wrap: wrap;
-} */
-
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1300px; */
   width: 100%;
 }
 
 .brands .card {
   margin: 16px;
   background-color: var(--grey4);
-  width: 266px;
+  width: 248px;
   height: 120px;
   display: flex;
   border-radius: 5px;
@@ -402,10 +402,13 @@ main p {
 
 .socials {
   /* padding: 48px; */
-  height: 124px;
-  width: 1160px;
+  height: 100%;
+  max-height: 500px;
+  max-width: 1300px;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding-top: 30px;
   padding-bottom: 40px;
@@ -416,6 +419,7 @@ main p {
   height: 124px;
   background-color: var(--off-white);
   border-radius: 15px;
+  margin:12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -755,7 +759,114 @@ footer p {
   background-color: #101010;
 }
 
-/* Media Queries */
+/* Media Query 1250px */
+@media screen and (max-width: 1250px) {
+  .nav-menu {
+    position: fixed;
+    /* top: 0; */
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #000;
+    color: white;
+    z-index: 1000;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+    display: flex;
+    height: 400px;
+  }
+
+  .nav-item {
+    margin: 0px;
+    padding: 0px;
+    /* margin: 2.5rem 0; */
+  }
+
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: inherit;
+    /* height: auto; */
+  }
+
+  .nav-menu .right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1001;
+    width: 200px;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    /* background-color: white; */
+  }
+
+  .bar {
+    background-color: white;
+  }
+  .nav-buttons {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Grey overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* Semi-transparent grey */
+    z-index: 999; /* Below the navbar but above the content */
+    display: none; /* Hidden by default */
+  }
+
+  /* Show the overlay */
+  .overlay.active {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: 999;
+  }
+
+  .nav-buttons button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  nav .left {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    /* width: 100px;
+    height: 100px; */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+/* Media Queries Phone Screen  */
 @media screen and (max-width: 375px) {
   * {
     /* max-width: 375px; */
@@ -921,7 +1032,6 @@ footer p {
   .overlay.active {
     display: block;
     background-color: rgba(0, 0, 0, 0.507);
-
     z-index: 999;
   }
 
@@ -1053,30 +1163,15 @@ footer p {
     margin: 0; /* Remove gaps */
     padding: 0;
   }
-  /* .rotate-up4 {
-    transform: rotate(-4deg);
-  }
-  .rotate-neg2 {
-    transform: rotate(+2deg);
-  }
-  .rotate-up2 {
-    transform: rotate(-2deg);
-  }
-  .rotate-neg4 {
-    transform: rotate(+4deg);
-  } */
 
   .new-tabs {
     height: 550px;
-    /* position: relative; */
   }
 
   .new-tabs .center {
     position: relative;
   }
   .white-rectangle {
-    /* display: flex;
-    flex-direction: column; */
     width: 340px;
     height: 120px;
   }
@@ -1161,11 +1256,6 @@ footer p {
   .brands .card .icon {
     width: 100px;
   }
-
-  /* .platforms {
-    height: 900px;
-    padding-top: 40px;
-  } */
 
   #p-top-80 {
     padding-top: 80px;
