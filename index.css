@@ -47,6 +47,21 @@
   font-style: normal;
 }
 
+.text-900w-72px {
+  font-size: 72px;
+  font-weight: 900;
+}
+
+.text-700w-36px {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.text-700w-64px {
+  font-weight: 700;
+  font-size: 64px;
+}
+
 /* global/body stylings  */
 html,
 body {
@@ -262,11 +277,12 @@ main p {
   padding: 28px;
 }
 
-.new-tabs .center h1 {
+/* .new-tabs .center h1 {
   font-weight: 700;
   font-size: 72px;
   margin: 0px;
-}
+} */
+
 .center {
   margin: auto;
   display: flex;
@@ -322,13 +338,10 @@ main p {
 .findtrend-brands div {
   /* width: 1200px; */
   /* margin-bottom: 16px; */
-  padding: 0 40px;
+  /* padding: 0 40px; */
 }
 
 .findtrend-brands h1 {
-  font-weight: 700;
-  font-size: 64px;
-
   color: var(--black2);
   line-height: 76px;
 }
@@ -363,12 +376,13 @@ main p {
   width: 100%;
 }
 
-.brands .card {
+.card {
   margin: 16px;
   background-color: var(--grey4);
   width: 248px;
   height: 120px;
   display: flex;
+  padding: 10px;
   border-radius: 5px;
   align-items: center;
   justify-self: center;
@@ -376,7 +390,7 @@ main p {
 
 .brands .icon {
   margin: auto;
-  width: 200px;
+  width: 70%;
   object-fit: cover;
 }
 
@@ -419,7 +433,7 @@ main p {
   height: 124px;
   background-color: var(--off-white);
   border-radius: 15px;
-  margin:12px;
+  margin: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -568,14 +582,9 @@ main p {
 svg {
   height: 18px;
   margin-right: 8px;
-  /* vertical-align: bottom; */
-  /* stroke-width: 20px; */
 }
 
 .check {
-  /* height: 24px;÷ */
-  /* width: 24px; */
-  /* stroke-width: 2px; */
 }
 
 .button-bottom {
@@ -863,7 +872,41 @@ footer p {
 @media screen and (max-width: 1000px) {
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
+  .text-900w-52px {
+    font-size: 52px;
+    font-weight: 900;
+  }
+  .text-700w-52px {
+    font-size: 52px;
+    font-weight: 700;
+  }
+
+  .text-700w-48px {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .card {
+    box-sizing: border-box;
+    /* width: calc(50% - 48px); */
+    /* width: 50%; */
+    /* height: 75px; */
+    height: 100px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brands .card .icon {
+    /* width: 100px; */
+  }
+  .brands .icon {
+    margin: auto;
+    width: 70%;
+    object-fit: cover;
+  }
 }
 
 /* Media Queries Phone Screen  */
@@ -888,6 +931,11 @@ footer p {
   .text-900w-36px {
     font-size: 36px;
     font-weight: 900;
+  }
+
+  .text-700w-36px {
+    font-size: 28px;
+    font-weight: 700;
   }
 
   #text-900w-36px {
@@ -1213,7 +1261,7 @@ footer p {
     /* height: 1000px;
      */
     /* padding-top: 24px; */
-    width: 375px;
+    /* width: 375px; */
   }
 
   .findtrend-brands h1 {
@@ -1243,18 +1291,19 @@ footer p {
     padding-bottom: 80px;
   }
 
-  .brands .card {
+  .card {
     box-sizing: border-box;
-    width: calc(50% - 48px);
+    width: calc(50% - 24px);
     height: 75px;
     margin: 8px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .brands .card .icon {
-    width: 100px;
+    width: 70%;
   }
 
   #p-top-80 {
