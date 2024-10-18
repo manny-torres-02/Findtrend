@@ -52,6 +52,14 @@
   font-weight: 900;
 }
 
+.text-800w-72px {
+  font-size: 72px;
+  font-weight: 800;
+}
+.text-700w-72px {
+  font-size: 72px;
+  font-weight: 700;
+}
 .text-700w-36px {
   font-weight: 700;
   font-size: 64px;
@@ -501,7 +509,8 @@ main p {
   background-color: var(--black);
   color: white;
   max-height: 3000px;
-  padding: 128px;
+  /* height: 100%; */
+  padding: 84px 14px;
   /* height: 1200px; */
 }
 
@@ -515,12 +524,12 @@ main p {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-content: center;
   margin-top: 12px;
-  max-width: 1300px;
+  max-width: 1375px;
   width: 100%;
-  max-height: 2000px;
+  /* max-height: 2000px; */
 }
 
 .pricing-card {
@@ -531,6 +540,7 @@ main p {
   border-radius: 15px;
   padding: 24px;
   position: relative;
+  margin-bottom: 16px;
 }
 
 .odd {
@@ -640,6 +650,7 @@ svg {
   justify-content: space-around;
   width: 350px;
   font-size: 24px;
+  margin-bottom: 16px;
 }
 
 .yearly {
@@ -706,9 +717,9 @@ input:checked + .slider:before {
 }
 .cta h1 {
   margin: 0;
-  font-size: 72px;
+  /* font-size: 72px; */
   text-align: right;
-  font-weight: 800;
+  /* font-weight: 800; */
 }
 
 .grey-text {
@@ -732,7 +743,7 @@ input:checked + .slider:before {
 footer {
   height: 100px;
   margin: 20px;
-  width: 1280px;
+  /* width: 1280px; */
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -787,6 +798,10 @@ footer p {
 
 /* Media Query 1250px */
 @media screen and (max-width: 1250px) {
+  .nav-wrapper {
+    position: fixed;
+  }
+
   .nav-menu {
     position: fixed;
     /* top: 0; */
@@ -849,6 +864,11 @@ footer p {
     margin-top: 20px;
   }
 
+  #white-button {
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+
   /* Grey overlay */
   .overlay {
     position: fixed;
@@ -894,6 +914,11 @@ footer p {
     font-size: 52px;
     font-weight: 900;
   }
+
+  .text-900w-40px {
+    font-size: 40px;
+    font-weight: 900;
+  }
   .text-700w-52px {
     font-size: 52px;
     font-weight: 700;
@@ -901,6 +926,16 @@ footer p {
 
   .text-700w-48px {
     font-size: 48px;
+    font-weight: 700;
+  }
+
+  .text-700w-40px {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .text-700w-36px {
+    font-size: 36px;
     font-weight: 700;
   }
 
@@ -933,6 +968,31 @@ footer p {
   .social-icon {
     /* width: 32px; */
     /* height: 32px; */
+  }
+
+  footer {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  footer .left {
+    padding: 0px;
+  }
+
+  .footer-links {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .footer-links li {
+    margin: 0;
+    padding: 0;
   }
 }
 
